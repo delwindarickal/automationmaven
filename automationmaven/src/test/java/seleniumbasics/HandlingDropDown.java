@@ -16,12 +16,30 @@ public class HandlingDropDown extends Base {
 		System.out.println(dropdown.isEnabled());
 		
 	}
+	public void handle_Checkbox() {
+		driver.navigate().to("https://www.webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html");
+		WebElement checkbox1= driver.findElement(By.xpath("//input[@value='option-1']"));
+		checkbox1.click();
+		System.out.println(checkbox1.isSelected());
+		System.out.println(checkbox1.isEnabled());
+		System.out.println(checkbox1.isDisplayed());
+	}
+	public void handle_Radiobutton() {
+		driver.navigate().to("https://www.webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html");
+		WebElement radiobutton1= driver.findElement(By.xpath("//input[@value='blue']"));
+		radiobutton1.click();
+		System.out.println(radiobutton1.isSelected());
+		System.out.println(radiobutton1.isEnabled());
+		System.out.println(radiobutton1.isDisplayed());
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 HandlingDropDown handling_DropDown= new HandlingDropDown();
 handling_DropDown.intializebrowser();
-handling_DropDown.handle_DropDown();
+//handling_DropDown.handle_DropDown();
+//handling_DropDown.handle_Checkbox();
+handling_DropDown.handle_Radiobutton();
 	}
 
 }
